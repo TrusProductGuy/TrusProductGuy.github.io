@@ -59,20 +59,6 @@ const CONFIG = {
       body: "At McGraw Hill, I defined acquisition, engagement, and retention measures for a new K-12 assessment product team and built the dashboards that became the standard across other product lines. I do discovery directly with teachers and customers, and at WebAssign I rebuilt how product, engineering, and sales worked together on it. That is how we found usability wins like a course setup tool that saved teachers thousands of hours, and it is the loop I'd want for RedThread: educator feedback and usage data deciding what we build next." },
   ],
 
-  valuesTitle: "How I work, in K12 Coalition's five competencies",
-  values: [
-    { name: "Accountability",
-      body: "I plan to the commitments I make. On the Statistics line, I managed about $500K a year and launched a textbook under budget. At WebAssign, we beat forecast with 10% unit growth over two years." },
-    { name: "Adaptability",
-      body: "I've moved from a single product line to leading product for a whole platform, and from higher education to K-12 assessments. At McGraw Hill, I restructured the team around OKRs to improve impact, velocity, and delivery predictability." },
-    { name: "Collaboration",
-      body: "My Statistics team was named Team of the Year Runner-Up, out of 30 teams, for collaboration and operational excellence. Most of my work sits between groups: content, UX, engineering, marketing, and sales." },
-    { name: "Customer Service Orientation",
-      body: "I've led discovery directly with customers, often joining sales calls. I've launched a tool that saved teachers thousands of hours on course setup, and Class Insights, an award-winning analytics suite where students practiced 1 million math and science problems within three months of launch." },
-    { name: "Initiative",
-      body: "At McGraw Hill, I founded a committee to drive adoption of an AI prototyping tool for faster, better customer discovery, and I built an AI agent that raises the quality of my team's product requirements." }
-  ],
-
   questions: [
     "RedThread Knowledge pairs reading with writing and project work, in <a style='color:#4A3F9E' href='https://k12coalition.com/?p=3271'>a daily literacy session of 75 minutes in K-2 and 90 in grades 3-5</a>. When an AI app gives feedback on student work in that block, what makes a teacher trust it: that it's fast, that it's grounded in the program's own rubrics and exemplars, or that the teacher can see why it said what it said? I'd want to work out how much of that trust comes from the curriculum and how much from the product.",
     "RedThread Foundations is built on structured phonics routines and decodable Readers. For the youngest students, what is a digital product's job: planning and pacing help for the teacher, visibility into who is stuck on which phonics skill, or something in front of the child? I'd expect the answer to be teacher-side first, and I'd want to test that with K-2 teachers before building anything for a child's screen.",
@@ -259,11 +245,6 @@ const CONFIG = {
       <div class="card-grid" id="cards"></div>
     </section>
 
-    <section class="values" aria-labelledby="valuesTitle">
-      <h2 id="valuesTitle"></h2>
-      <ul class="values-grid" id="values"></ul>
-    </section>
-
     <svg class="divider" viewBox="0 0 900 28" preserveAspectRatio="none" aria-hidden="true" focusable="false"><line x1="0" y1="14" x2="420" y2="14"/><circle cx="440" cy="14" r="4"/><circle cx="450" cy="14" r="4"/><circle cx="460" cy="14" r="4"/><line x1="480" y1="14" x2="900" y2="14"/></svg>
 
     <section class="questions" aria-labelledby="qTitle">
@@ -312,14 +293,6 @@ const CONFIG = {
       <h3>${c.title}</h3>
       <p>${c.body}</p>
     </div>
-  `).join('');
-
-  document.getElementById('valuesTitle').textContent = CONFIG.valuesTitle;
-  document.getElementById('values').innerHTML = CONFIG.values.map(v => `
-    <li class="value">
-      <h3>${v.name}</h3>
-      <p>${v.body}</p>
-    </li>
   `).join('');
 
   document.getElementById('questions').innerHTML = CONFIG.questions.map((q,i) => `
